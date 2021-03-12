@@ -12,9 +12,9 @@ RSME are compared.
 
 **Answer:** For decision trees, overfitting does indeed occur with respect to leaf size. As leaf size
 decreases, overfitting is more likely to occur. This can be observed in the figures below. As
-leaf-size decreases, the RSME for in-sample data decreases, even reaching zero at leaf_size =
+leaf-size decreases, the RSME for in-sample data decreases, even reaching zero at leaf_size = 1. 
 
-1. However, this alone does not constitute overfitting. Rather, it is the out-sample RSME line
+However, this alone does not constitute overfitting. Rather, it is the out-sample RSME line
 that confirms it. From leaf_size = ~10, as leaf_size decreases, out-sample RSME actually
 increases while in-sample RSME decreases. In other words, overfitting occurs when leaf_size
 is less than ~10. This is indicative of overfitting, as the smaller leaf sizes are too attuned to the
@@ -61,22 +61,8 @@ To compare classic decision trees versus random trees, I measured and charted th
 correlation for in-sample and out-sample results for both types of trees. The results are shown
 in Figure 5 below, with the exact numbers printed out on the right:
 
-```
-Average In Sample
-Correlation:
-DTLearner:
-0.
-RTLearner:
-0.
-```
-```
-Average Out Sample
-Correlation:
-DTLearner:
-0.
-RTLearner:
-0.
-```
+
+
 As you can see, the classic decision tree performs better for both in-sample and out-sample
 data. This is to be expected, as split values for random trees are chosen at random, rather than
 by the greatest correlation, as they are in decision trees. Still, I am surprised how accurate
