@@ -1,0 +1,2 @@
+# ML-for-Trading-Decision-Trees
+Although the classic decision tree is more accurate in both in-sample and out-sample testing (as shown by correlation), the classic tree requires more build and querying time. Though the differences shown here are minimal, that is due to our small sample data. In a larger setting, these differences would become more pronounced. The pros and cons of each type of tree are important to keep in mind when deciding what to use in a professional setting.
