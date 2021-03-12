@@ -1,7 +1,6 @@
 # ML-for-Trading-Decision-Trees
 Compares classic decision trees with bag learners and random trees.
 
-Machine Learning for Trading
 By: Sarah Hernandez
 
 **Experiment 1:**
@@ -10,6 +9,13 @@ By: Sarah Hernandez
 dataset, with the latter graph showing a zoomed in scale for clarity. In-sample and out-sample
 RSME are compared.
 
+<p align="center">
+  <img src="Figure1.png" />
+</p>
+
+<p align="center">
+  <img src="Figure2.png" />
+</p>
 **Answer:** For decision trees, overfitting does indeed occur with respect to leaf size. As leaf size
 decreases, overfitting is more likely to occur. This can be observed in the figures below. As
 leaf-size decreases, the RSME for in-sample data decreases, even reaching zero at leaf_size = 1. 
@@ -31,6 +37,14 @@ when leaf size is greater than 10 (in this case), or about 3% the size of the tr
 DTLearner and, based on the data above, using 15 bags to prevent overfitting. Here, we use
 the Istanbul dataset, with the latter graph showing a zoomed in scale for clarity. In-sample and
 out-sample RSME are compared between bagged and non-bagged results.
+
+<p align="center">
+  <img src="Figure3.png" />
+</p>
+
+<p align="center">
+  <img src="Figure4.png" />
+</p>
 
 **Answer** : Bagging can drastically reduce, but not eliminate the risk of overfitting with respect to
 leaf_size. Using 15 bags of DT learner, Figures 3 and 4 below show the RSME difference
@@ -61,7 +75,9 @@ To compare classic decision trees versus random trees, I measured and charted th
 correlation for in-sample and out-sample results for both types of trees. The results are shown
 in Figure 5 below, with the exact numbers printed out on the right:
 
-
+<p align="center">
+  <img src="Figure5.png" />
+</p>
 
 As you can see, the classic decision tree performs better for both in-sample and out-sample
 data. This is to be expected, as split values for random trees are chosen at random, rather than
@@ -73,6 +89,10 @@ Though the correlation between predicted values and real values is higher for th
 decision tree than the random tree, it is more time intensive to build a decision tree. I build
 each type of tree five times and average the time it took each tree to build itself. The results are
 shown on the next page in Figure 6.
+
+<p align="center">
+  <img src="Figure6.png" />
+</p>
 
 As you can see, it took the classic decision tree about 3 times long to build itself as the random
 tree. Though we are talking about microseconds here, we are only working with a few hundred
@@ -88,6 +108,10 @@ Build the tree, however, is only theoretically done once, or only after acquirin
 data. A much more useful metric for data scientists is the overall time it take to query the tree
 once it is build. Once again, the results below are the average of five runs each of DT and RT
 learner, with leaf sizes of 15. The results can be seen below in Figure 7:
+
+<p align="center">
+  <img src="Figure7.png" />
+</p>
 
 As you can see, it takes nearly twice as long for the classic tree to be queried as the random
 tree. I’d imagine that this is because the classic tree is more precise. Its precision results in
